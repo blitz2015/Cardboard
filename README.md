@@ -8,6 +8,8 @@ Browse Danbooru and save favorites
 Cardboard (name subject to change) is browser for Danbooru that uses Adwaita and a masonry layout for the catalog.
 It can save your favorite posts locally without an account and save up to 10 tags for the most recent posts (limited to 200) of those tags be displayed in a single catalog.
 
+**CARDBOARD IS IN ALPHA**
+
 **CARDBOARD NEEDS AN APP ICON**
 ## Features
   - Download posts
