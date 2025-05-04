@@ -50,7 +50,8 @@ def order_children(self):
         if not (previous_column != None and previous_column.get_parent() == column):
             if previous_column != None:
                 previous_column.remove(entry.get_parent())
-                entry.unparent()
+                if entry.get_parent() != None:
+                    entry.get_parent().set_child(None)
             column.get_child().append(entry)
         i += 1
     GLib.timeout_add(200, load_in_view, self.Children)
