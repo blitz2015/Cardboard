@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.96.0 -->
+<interface>
+  <!-- interface-name window.ui -->
+  <requires lib="gio" version="2.0"/>
+  <requires lib="gtk" version="4.18"/>
+  <requires lib="libadwaita" version="1.7"/>
+  <template class="Window" parent="AdwApplicationWindow">
+    <property name="content">
+      <object class="AdwToastOverlay">
+        <property name="child">
+          <object class="GtkStack" id="Stack">
+            <property name="transition-type">crossfade</property>
+            <child>
+              <object class="GtkStackPage">
+                <property name="child">
+                  <object class="AdwTabOverview">
+                    <property name="child">
+                      <object class="AdwToolbarView">
+                        <property name="content">
+                          <object class="AdwTabView" id="TabView">
+                            <property name="menu-model">ContextMenu</property>
+                          </object>
+                        </property>
+                        <child type="top">
+                          <object class="AdwHeaderBar">
+                            <property name="title-widget">
+                              <object class="AdwWindowTitle">
+                                <property name="title">Browse</property>
+                              </object>
+                            </property>
+                            <child type="start">
+                              <object class="GtkButton">
+                                <property name="action-name">app.backward</property>
+                                <property name="icon-name">left-large-symbolic</property>
+                                <property name="sensitive">False</property>
+                                <property name="tooltip-text">Back</property>
+                              </object>
+                            </child>
+                            <child type="start">
+                              <object class="GtkButton">
+                                <property name="action-name">app.forward</property>
+                                <property name="icon-name">right-large-symbolic</property>
+                                <property name="tooltip-text">Foward</property>
+                              </object>
+                            </child>
+                            <child type="start">
+                              <object class="GtkButton">
+                                <property name="action-name">app.reload</property>
+                                <property name="icon-name">arrow-circular-top-right-symbolic</property>
+                                <property name="tooltip-text">Reload</property>
+                              </object>
+                            </child>
+                            <child type="start">
+                              <object class="GtkButton">
+                                <property name="action-name">app.new-tab</property>
+                                <property name="icon-name">tab-new-symbolic</property>
+                                <property name="tooltip-text">New Tab</property>
+                              </object>
+                            </child>
+                            <child type="end">
+                              <object class="GtkStackSwitcher">
+                                <property name="stack">Stack</property>
+                              </object>
+                            </child>
+                            <child type="end">
+                              <object class="GtkMenuButton">
+                                <property name="icon-name">open-menu-symbolic</property>
+                                <property name="menu-model">BrowseMenu</property>
+                                <property name="tooltip-text">Menu</property>
+                              </object>
+                            </child>
+                            <child type="end">
+                              <object class="GtkButton">
+                                <property name="action-name">app.overview</property>
+                                <property name="icon-name">view-grid-symbolic</property>
+                                <property name="tooltip-text">View Open Tabs</property>
+                              </object>
+                            </child>
+                            <child type="title">
+                              <object class="GtkEntry" id="BrowseEntry">
+                                <property name="placeholder-text">Browse</property>
+                                <property name="primary-icon-name">edit-find-symbolic</property>
+                                <property name="width-request">300</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child type="top">
+                          <object class="AdwTabBar">
+                            <property name="view">TabView</property>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
+                    <property name="enable-new-tab">True</property>
+                    <property name="view">TabView</property>
+                  </object>
+                </property>
+                <property name="icon-name">edit-find-symbolic</property>
+                <property name="name">Browse</property>
+                <property name="title">Browse</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkStackPage">
+                <property name="child">
+                  <object class="AdwToolbarView" id="SavedSearches">
+                    <child type="top">
+                      <object class="AdwHeaderBar">
+                        <property name="title-widget">
+                          <object class="AdwWindowTitle">
+                            <property name="title">Saved Searches</property>
+                          </object>
+                        </property>
+                        <child type="end">
+                          <object class="GtkStackSwitcher">
+                            <property name="stack">Stack</property>
+                          </object>
+                        </child>
+                        <child type="end">
+                          <object class="GtkMenuButton">
+                            <property name="icon-name">open-menu-symbolic</property>
+                            <property name="menu-model">Menu</property>
+                            <property name="tooltip-text">Menu</property>
+                          </object>
+                        </child>
+                        <child type="end">
+                          <object class="GtkButton">
+                            <property name="action-name">app.saved-searches</property>
+                            <property name="css-classes">
+</property>
+                            <property name="icon-name">tag-symbolic</property>
+                            <property name="tooltip-text">Edit</property>
+                          </object>
+                        </child>
+                        <child type="start">
+                          <object class="GtkButton">
+                            <property name="action-name">app.reload</property>
+                            <property name="icon-name">arrow-circular-top-right-symbolic</property>
+                            <property name="tooltip-text">Reload</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+                <property name="icon-name">heart-filled-symbolic</property>
+                <property name="name">Saved Searches</property>
+                <property name="title">Saved Searches</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkStackPage">
+                <property name="child">
+                  <object class="AdwToolbarView">
+                    <property name="content">
+                      <object class="GtkOverlay">
+                        <property name="child">
+                          <object class="AdwBin" id="Favorites"/>
+                        </property>
+                      </object>
+                    </property>
+                    <child type="top">
+                      <object class="AdwHeaderBar">
+                        <property name="title-widget">
+                          <object class="AdwWindowTitle">
+                            <property name="title">Favorites</property>
+                          </object>
+                        </property>
+                        <child type="end">
+                          <object class="GtkStackSwitcher">
+                            <property name="stack">Stack</property>
+                          </object>
+                        </child>
+                        <child type="end">
+                          <object class="GtkMenuButton">
+                            <property name="icon-name">open-menu-symbolic</property>
+                            <property name="menu-model">FavoritesMenu</property>
+                            <property name="tooltip-text">Menu</property>
+                          </object>
+                        </child>
+                        <child type="start">
+                          <object class="GtkButton">
+                            <property name="action-name">app.reload</property>
+                            <property name="icon-name">arrow-circular-top-right-symbolic</property>
+                            <property name="tooltip-text">Reload</property>
+                          </object>
+                        </child>
+                        <child type="title">
+                          <object class="GtkSearchEntry" id="FavoritesEntry">
+                            <property name="placeholder-text">Search</property>
+                            <property name="width-request">300</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+                <property name="icon-name">star-large-symbolic</property>
+                <property name="name">Favorites</property>
+                <property name="title">Favorites</property>
+              </object>
+            </child>
+          </object>
+        </property>
+      </object>
+    </property>
+    <property name="title">Cardboard</property>
+  </template>
+  <object class="AdwStatusPage" id="NoPosts">
+    <property name="description">Try something else</property>
+    <property name="icon-name">item-missing-symbolic</property>
+    <property name="name">Catalog</property>
+    <property name="title">No Posts Found</property>
+  </object>
+  <object class="AdwStatusPage" id="NoFavorites">
+    <property name="description">Add a favorite to get started</property>
+    <property name="icon-name">star-outline-rounded-symbolic</property>
+    <property name="name">Catalog</property>
+    <property name="title">No Favorites</property>
+  </object>
+  <object class="AdwStatusPage" id="NoSearches">
+    <property name="description">Add a search to get started</property>
+    <property name="icon-name">heart-broken-symbolic</property>
+    <property name="name">Catalog</property>
+    <property name="title">No Saved Searches</property>
+  </object>
+  <menu id="BrowseMenu">
+    <item>
+      <attribute name="action">app.open-in-browser</attribute>
+      <attribute name="label">Open in Browser</attribute>
+    </item>
+    <section>
+      <item>
+        <attribute name="action">app.preferences</attribute>
+        <attribute name="label">Preferences</attribute>
+      </item>
+      <item>
+        <attribute name="action">win.show-help-overlay</attribute>
+        <attribute name="label">Keyboard Shortcuts</attribute>
+      </item>
+      <item>
+        <attribute name="action">app.about</attribute>
+        <attribute name="label">About Cardboard</attribute>
+      </item>
+    </section>
+  </menu>
+  <menu id="Menu">
+    <section>
+      <item>
+        <attribute name="action">app.preferences</attribute>
+        <attribute name="label">Preferences</attribute>
+      </item>
+      <item>
+        <attribute name="action">win.show-help-overlay</attribute>
+        <attribute name="label">Keyboard Shortcuts</attribute>
+      </item>
+      <item>
+        <attribute name="action">app.about</attribute>
+        <attribute name="label">About Cardboard</attribute>
+      </item>
+    </section>
+  </menu>
+  <menu id="ContextMenu">
+    <item>
+      <attribute name="action">app.open-context-tab</attribute>
+      <attribute name="label">Open in Browser</attribute>
+    </item>
+    <item>
+      <attribute name="action">app.reload-context-tab</attribute>
+      <attribute name="label">Reload</attribute>
+    </item>
+    <item>
+      <attribute name="action">app.close-context-tab</attribute>
+      <attribute name="label">Close</attribute>
+    </item>
+  </menu>
+  <menu id="FavoritesMenu">
+    <submenu>
+      <attribute name="label">Sort</attribute>
+      <item>
+        <attribute name="action">app.sort</attribute>
+        <attribute name="label">Last Added</attribute>
+        <attribute name="target">last-added</attribute>
+      </item>
+      <item>
+        <attribute name="action">app.sort</attribute>
+        <attribute name="label">Newest</attribute>
+        <attribute name="target">newest</attribute>
+      </item>
+      <item>
+        <attribute name="action">app.sort</attribute>
+        <attribute name="label">Oldest</attribute>
+        <attribute name="target">oldest</attribute>
+      </item>
+      <item>
+        <attribute name="action">app.sort</attribute>
+        <attribute name="label">Random</attribute>
+        <attribute name="target">random</attribute>
+      </item>
+    </submenu>
+    <section>
+      <item>
+        <attribute name="action">app.preferences</attribute>
+        <attribute name="label">Preferences</attribute>
+      </item>
+      <item>
+        <attribute name="action">win.show-help-overlay</attribute>
+        <attribute name="label">Keyboard Shortcuts</attribute>
+      </item>
+      <item>
+        <attribute name="action">app.about</attribute>
+        <attribute name="label">About Cardboard</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

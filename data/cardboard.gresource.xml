@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/io/github/blitz2015/Cardboard">
+    <file>gtk/help-overlay.ui</file>
+    <file>gtk/window.ui</file>
+    <file>gtk/preferences.ui</file>
+    <file>gtk/entry.ui</file>
+    <file>gtk/catalog.ui</file>
+    
+    <file alias="style.css">gtk/style.css</file>
+    
+    <file preprocess="xml-stripblanks">icons/scalable/actions/settings-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/image-round-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/list-add-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/star-large-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/heart-filled-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/tab-new-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/left-large-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/right-large-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/arrow-circular-top-right-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/shoe-box-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/star-outline-rounded-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/tag-outline-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/tag-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/star-new-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/item-missing-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/heart-broken-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/parent-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/person-symbolic.svg</file>
+  </gresource>
+</gresources>
+

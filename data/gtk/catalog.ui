@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.96.0 -->
+<interface>
+  <!-- interface-name catalog.ui -->
+  <requires lib="gtk" version="4.18"/>
+  <requires lib="libadwaita" version="1.0"/>
+  <template class="Catalog" parent="AdwBin">
+    <property name="child">
+      <object class="GtkScrolledWindow">
+        <property name="child">
+          <object class="GtkViewport">
+            <property name="child">
+              <object class="GtkFlowBox" id="FlowBox">
+                <property name="homogeneous">True</property>
+                <property name="margin-end">4</property>
+                <property name="margin-start">4</property>
+                <property name="margin-top">4</property>
+                <property name="selection-mode">none</property>
+                <property name="valign">start</property>
+              </object>
+            </property>
+            <property name="scroll-to-focus">False</property>
+            <property name="vscroll-policy">natural</property>
+          </object>
+        </property>
+        <property name="hscrollbar-policy">never</property>
+        <property name="propagate-natural-width">True</property>
+      </object>
+    </property>
+    <property name="name">Catalog</property>
+  </template>
+</interface>

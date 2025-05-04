@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.blitz2015.Cardboard</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  <name>Cardboard</name>
+  <summary>Browse Danbooru and save favorites</summary>
+  <description>
+    <p>
+      Cardboard (name subject to change) is browser for Danbooru that uses Adwaita and a masonry layout for the catalog.
+      It can save your favorite posts locally without an account and save up to 10 tags for the most recent posts (limited to 200) of those tags be displayed in a single catalog.
+    </p>
+  </description>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#B48F6B</color>
+    <color type="primary" scheme_preference="dark">#66482B</color>
+  </branding>
+  
+  <developer id="io.github.blitz2015">
+    <name>BLITZ</name>
+  </developer>
+
+  <url type="homepage">https://github.com/blitz2015/Cardboard/</url>
+  <url type="vcs-browser">https://github.com/blitz2015/Cardboard/</url>
+  <url type="bugtracker">https://github.com/blitz2015/Cardboard/issues</url>
+
+  <launchable type="desktop-id">io.github.blitz2015.Cardboard.desktop</launchable>
+
+  <requires>
+    <display_length compare="ge">768</display_length>
+  </requires>
+  <recommends>
+    <internet>always</internet>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+    <control>tablet</control>
+  </recommends>
+  <supports>
+    <internet>offline-only</internet>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+    <control>tablet</control>
+  </supports>
+  
+  <releases>
+    <release version="1.0.0" date="2025-01-05">
+      <description translate="no">
+        <ul>
+          <li>It just started</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+  
+  <screenshot type="default">
+    <image>https://raw.github.com/blitz2015/Cardboard/blob/master/data/screenshots/1.png</image>
+    <caption>Cardboard</caption>
+  </screenshot>
+  <screenshot>
+    <image>https://raw.github.com/blitz2015/Cardboard/blob/master/data/screenshots/2.png</image>
+    <caption>Saved Searches</caption>
+  </screenshot>
+  <screenshot>
+    <image>https://raw.github.com/blitz2015/Cardboard/blob/master/data/screenshots/3.png</image>
+    <caption>Favorites</caption>
+  </screenshot>
+  <screenshot>
+    <image>https://raw.github.com/blitz2015/Cardboard/blob/master/data/screenshots/4.png</image>
+    <caption>Favorites 2</caption>
+  </screenshot>
+  <screenshot>
+    <image>https://raw.github.com/blitz2015/Cardboard/blob/master/data/screenshots/5.png</image>
+    <caption>Favorites 3</caption>
+  </screenshot>
+  <screenshot>
+    <image>https://raw.github.com/blitz2015/Cardboard/blob/master/data/screenshots/6.png</image>
+    <caption>Favorites 4</caption>
+  </screenshot>
+  <screenshot>
+    <image>https://raw.github.com/blitz2015/Cardboard/blob/master/data/screenshots/7.png</image>
+    <caption>Dark Mode</caption>
+  </screenshot>
+</component>

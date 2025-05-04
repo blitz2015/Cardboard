@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.96.0 -->
+<interface>
+  <!-- interface-name item.ui -->
+  <requires lib="gtk" version="4.18"/>
+  <requires lib="libadwaita" version="1.6"/>
+  <template class="Entry" parent="AdwBin">
+    <property name="child">
+      <object class="GtkOverlay" id="Overlay">
+        <child type="overlay">
+          <object class="GtkRevealer" id="Revealer">
+            <property name="child">
+              <object class="GtkBox">
+                <property name="homogeneous">True</property>
+                <property name="margin-bottom">6</property>
+                <property name="margin-end">6</property>
+                <property name="margin-start">6</property>
+                <property name="margin-top">6</property>
+                <property name="valign">start</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="valign">start</property>
+                    <child>
+                      <object class="GtkButton" id="Duration">
+                        <property name="can-focus">False</property>
+                        <property name="can-target">False</property>
+                        <property name="css-classes">osd
+duration</property>
+                        <property name="label">00:00</property>
+                        <property name="visible">False</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="halign">end</property>
+                    <property name="spacing">6</property>
+                    <property name="valign">start</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="halign">end</property>
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">8</property>
+                        <property name="valign">start</property>
+                        <child>
+                          <object class="GtkButton" id="Children">
+                            <property name="css-classes">circular
+osd</property>
+                            <property name="icon-name">person-symbolic</property>
+                            <property name="tooltip-text">View Children</property>
+                            <property name="visible">False</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="Parent">
+                            <property name="css-classes">osd
+circular</property>
+                            <property name="icon-name">parent-symbolic</property>
+                            <property name="tooltip-text">View Parent</property>
+                            <property name="visible">False</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="halign">end</property>
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">8</property>
+                        <property name="valign">start</property>
+                        <child>
+                          <object class="GtkButton" id="Favorite">
+                            <property name="css-classes">circular
+osd</property>
+                            <property name="icon-name">star-new-symbolic</property>
+                            <property name="tooltip-text">Add Favorite</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="Tags">
+                            <property name="css-classes">osd
+circular</property>
+                            <property name="icon-name">tag-symbolic</property>
+                            <property name="tooltip-text">View Tags</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="Open">
+                            <property name="css-classes">circular
+osd</property>
+                            <property name="hexpand">True</property>
+                            <property name="icon-name">image-round-symbolic</property>
+                            <property name="tooltip-text">Open</property>
+                            <property name="visible">False</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="Download">
+                            <property name="css-classes">osd
+circular</property>
+                            <property name="icon-name">folder-download-symbolic</property>
+                            <property name="tooltip-text">Download</property>
+                            <property name="vexpand">True</property>
+                            <property name="vexpand-set">True</property>
+                            <property name="visible">False</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </property>
+            <property name="transition-type">crossfade</property>
+            <property name="valign">start</property>
+          </object>
+        </child>
+      </object>
+    </property>
+    <property name="css-classes">card</property>
+    <property name="height-request">132</property>
+    <property name="overflow">hidden</property>
+  </template>
+</interface>
